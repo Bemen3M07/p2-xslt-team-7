@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<juegos>
+    <juego>
+        <titulo>The Legend of Zelda: Breath of the Wild</titulo>
+        <genero>Aventura</genero>
+        <plataforma>Nintendo Switch</plataforma>
+        <descripcion>Un juego de mundo abierto lleno de exploración y desafíos.</descripcion>
+    </juego>
+    <juego>
+        <titulo>Red Dead Redemption 2</titulo>
+        <genero>Aventura</genero>
+        <plataforma>PlayStation, Xbox, PC</plataforma>
+        <descripcion>Un juego de acción ambientado en el Viejo Oeste.</descripcion>
+    </juego>
+    <juego>
+        <titulo>Minecraft</titulo>
+        <genero>Sandbox</genero>
+        <plataforma>PC, Consolas, Móviles</plataforma>
+        <descripcion>Un juego de construcción y aventura en un mundo de bloques.</descripcion>
+    </juego>
+    <juego>
+        <titulo>God of War</titulo>
+        <genero>Acción</genero>
+        <plataforma>PlayStation</plataforma>
+        <descripcion>Una épica aventura mitológica de Kratos y su hijo Atreus.</descripcion>
+    </juego>
+    <juego>
+        <titulo>The Witcher 3: Wild Hunt</titulo>
+        <genero>Rol</genero>
+        <plataforma>PC, PlayStation, Xbox</plataforma>
+        <descripcion>Un juego de rol de mundo abierto con una historia inmersiva.</descripcion>
+    </juego>
+    <juego>
+        <titulo>Super Mario Odyssey</titulo>
+        <genero>Plataformas</genero>
+        <plataforma>Nintendo Switch</plataforma>
+        <descripcion>Una aventura de Mario a través de mundos llenos de sorpresas.</descripcion>
+    </juego>
+    <juego>
+        <titulo>Fortnite</titulo>
+        <genero>Battle Royale</genero>
+        <plataforma>PC, Consolas, Móviles</plataforma>
+        <descripcion>Un juego multijugador en el que compites para ser el último en pie.</descripcion>
+    </juego>
+    <juego>
+        <titulo>Overwatch</titulo>
+        <genero>Shooter</genero>
+        <plataforma>PC, PlayStation, Xbox</plataforma>
+        <descripcion>Un juego de disparos en equipos con personajes únicos y habilidades especiales.</descripcion>
+    </juego>
+    <juego>
+        <titulo>Animal Crossing: New Horizons</titulo>
+        <genero>Simulación</genero>
+        <plataforma>Nintendo Switch</plataforma>
+        <descripcion>Un juego de simulación en el que creas y personalizas tu propia isla.</descripcion>
+    </juego>
+    <juego>
+        <titulo>Cyberpunk 2077</titulo>
+        <genero>Rol</genero>
+        <plataforma>PC, PlayStation, Xbox</plataforma>
+        <descripcion>Un juego de rol en un mundo futurista lleno de aventuras y tecnología.</descripcion>
+    </juego>
+    <juego>
+        <titulo>Hades</titulo>
+        <genero>Acción/Roguelike</genero>
+        <plataforma>PC, Nintendo Switch</plataforma>
+        <descripcion>Un juego de acción rápido ambientado en el inframundo griego.</descripcion>
+    </juego>
+    <juego>
+        <titulo>Among Us</titulo>
+        <genero>Party</genero>
+        <plataforma>PC, Móviles</plataforma>
+        <descripcion>Un juego multijugador en el que debes descubrir al impostor en la nave.</descripcion>
+    </juego>
+</juegos>
