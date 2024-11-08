@@ -18,74 +18,98 @@
                 <style>
                     
                     body {
-                        font-family: Arial, sans-serif;     /* Aplica la fuente Arial o sans-serif si Arial no está disponible */
-                        background: #f4f4f9;                /* Define un fondo de color gris claro */
-                        color: #333;                        /* Establece el color del texto en gris oscuro */
-                        margin: 0;                          /* Elimina el margen predeterminado alrededor de la página */
-                        padding: 0;                         /* Elimina el relleno predeterminado */
-                        display: flex;                      /* Habilita el modelo de diseño flexbox */
-                        flex-direction: column;             /* Organiza los elementos del body en una columna */
-                        align-items: center;                /* Centra horizontalmente los elementos en el body */
-                        min-height: 100vh;                  /* Establece una altura mínima del 100% del viewport, asegurando que el body ocupe toda la pantalla */
-                    }
-                
-
-                    header, footer {
-                        background: #333;   /* Color de fondo gris oscuro */
-                        color: #fff;        /* Color del texto en blanco para contraste */
-                        text-align: center; /* Centra el texto horizontalmente */
-                        padding: 15px 0;    /* Agrega un espacio de 15px arriba y abajo */
-                        width: 100%;        /* Hace que el header y footer ocupen todo el ancho de la página */
+                        font-family: Arial, sans-serif;      /* Aplica la fuente Arial o sans-serif si Arial no está disponible */
+                        background: #f4f4f9;                 /* Fondo gris claro */
+                        margin: 0;                           /* Elimina el margen predeterminado alrededor de la página */
+                        padding: 0;                          /* Elimina el relleno predeterminado */
+                        display: flex;                       /* Flexbox habilitado */
+                        flex-direction: column;              /* Organiza los elementos en una columna */
+                        align-items: center;                 /* Centra horizontalmente los elementos */
+                        min-height: 100vh;                   /* Asegura que el body ocupe toda la altura del viewport */
+                        justify-content: space-between;      /* Distribuye los elementos de manera equitativa, dejando espacio entre ellos */
                     }
 
-                       .banner img {
+                    .main-content {
+                        flex-grow: 1;                        /* Permite que el contenido principal crezca para ocupar el espacio disponible */
+                        width: 100%;                         /* Asegura que el contenido principal ocupe todo el ancho disponible */
+                        padding: 20px;                       /* Agrega algo de espacio interno */
+                    }
+
+                    header {
+                        background-color: #333;    /* Fondo oscuro */
+                        color: #fff;               /* Texto blanco */
+                        width: 100%;               /* Ancho total */
+                        display: flex;             /* Flexbox para centrar el contenido */
+                        align-items: center;       /* Centrado vertical */
+                        justify-content: center;   /* Centrado horizontal */
+                        padding: 20px;             /* Espacio alrededor del contenido */
+                        box-sizing: border-box;    /* Asegura que el relleno se incluya en el cálculo del ancho */
+                    }
+
+                    .titulo {
+                        text-align: center;        /* Centra el contenido dentro de .titulo */
+                    }
+
+                    header h1 {
+                        margin: 0;                 /* Elimina márgenes por defecto alrededor del h1 */
+                        font-size: 36px;           /* Tamaño de fuente más grande */
+                    }
+
+                    .banner {
+                        width: 100%;               /* El banner ocupa todo el ancho */
+                        margin: 0;                  /* Elimina margen */
+                        padding: 0;                 /* Elimina relleno */
+                    }
+
+                    .banner img {
                         width: 100%;               /* La imagen del banner ocupa todo el ancho */
                         height: auto;              /* Ajusta la altura automáticamente */
                         display: block;            /* Quita el espacio inferior de las imágenes */
                     }
                 
-
-                    .footer {
+                    .content {
                         max-width: 800px;   /* Define un ancho máximo de 800px para el contenido central */
                         width: 100%;        /* Permite que el contenido ocupe todo el ancho disponible dentro del contenedor */
                         padding: 20px;      /* Agrega un relleno de 20px alrededor del contenido */
                     }
-                
 
-
-                    h1 {
-                        margin: 0;          /* Elimina el margen superior e inferior del título */
-                        font-size: 1.8em;   /* Define un tamaño de fuente de 1.8 veces el tamaño base, haciendo el título más grande */
+                    .Juego {
+                        background: #333;
+                        Color: white;
+                        border: 1px solid #ddd;
+                        border-radius: 8px;
+                        padding: 20px;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        transition: transform 0.2s;
                     }
-                
 
-
-                    .juego {
-                        background: #fff;                           /* Fondo blanco para cada tarjeta */
-                        border: 1px solid #ddd;                     /* Borde gris claro alrededor de la tarjeta */
-                        border-radius: 8px;                         /* Bordes redondeados en cada tarjeta */
-                        padding: 20px;                              /* Espacio interno de 20px dentro de la tarjeta */
-                        margin-bottom: 15px;                        /* Espacio inferior entre cada tarjeta */
-                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);   /* Sombra suave debajo de la tarjeta para darle profundidad */
+                    /* Agregar efecto al pasar el mouse */
+                    .Juego:hover {
+                        transform: scale(1.05); /* Efecto de agrandamiento */
                     }
-                
-
 
                     .title {
                         font-weight: bold;          /* Define el título en negrita */
                         margin-bottom: 10px;        /* Espacio inferior de 10px para separar el título del contenido siguiente */
                     }
                 
-
-
                     .genre, .platform, .description {
                         margin: 5px 0;      /* Agrega 5px de espacio arriba y abajo para separar las líneas */
                     }
                 
-
-
                     .description {
-                        color: #555;        /* Color gris medio para la descripción, diferenciándola visualmente del texto principal */
+                        color: grey;        /* Color gris medio para la descripción, diferenciándola visualmente del texto principal */
+                    }
+
+                    footer {
+                        width: 100%;                         /* El footer ocupa todo el ancho */
+                        background: #333;                    /* Fondo oscuro */
+                        color: #fff;                         /* Texto blanco */
+                        text-align: center;                  /* Centra el texto */
+                        padding: 10px 0;                     /* Espacio de relleno en el footer */
                     }
                 </style>
                               
@@ -96,7 +120,7 @@
 
                 <!-- Encabezado -->
                 <header>
-                    <div class="contenido">
+                    <div class="titulo">
                         <h1>Lista de Juegos</h1> <!-- Título principal de la página -->
                     </div>
                 </header>
