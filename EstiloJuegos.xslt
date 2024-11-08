@@ -26,37 +26,32 @@
                         width: 100%;
                     }
                     .content {
-                        max-width: 1200px;
+                        max-width: 800px;
                         width: 100%;
-                        padding: 0 20px;
-                        flex: 1;
+                        padding: 20px;
                     }
                     h1 {
                         margin: 0;
                         font-size: 1.8em;
                     }
-                    .container {
-                        display: flex;
-                        flex-wrap: wrap;
-                        gap: 20px;
-                        justify-content: center;
-                        padding: 20px;
-                    }
                     .card {
                         background: #fff;
                         border: 1px solid #ddd;
                         border-radius: 8px;
-                        padding: 15px;
-                        width: 250px;
+                        padding: 20px;
+                        margin-bottom: 15px;
                         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                     }
                     .title {
                         font-weight: bold;
-                        margin-bottom: 8px;
+                        font-size: 1.2em;
+                        margin-bottom: 10px;
                     }
-                    .platform {
-                        font-style: italic;
-                        color: #777;
+                    .genre, .platform, .description {
+                        margin: 5px 0;
+                    }
+                    .description {
+                        color: #555;
                     }
                 </style>
             </head>
@@ -70,16 +65,14 @@
 
                 <!-- Contenedor de tarjetas -->
                 <div class="content">
-                    <div class="container">
-                        <xsl:for-each select="juegos/juego">
-                            <div class="card">
-                                <div class="title"><xsl:value-of select="titulo" /></div>
-                                <div><strong>Género:</strong> <xsl:value-of select="genero" /></div>
-                                <div class="platform"><strong>Plataforma:</strong> <xsl:value-of select="plataforma" /></div>
-                                <div><strong>Descripción:</strong> <xsl:value-of select="descripcion" /></div>
-                            </div>
-                        </xsl:for-each>
-                    </div>
+                    <xsl:for-each select="juegos/juego">
+                        <div class="card">
+                            <div class="title"><xsl:value-of select="titulo" /></div>
+                            <div class="genre"><strong>Género:</strong> <xsl:value-of select="genero" /></div>
+                            <div class="platform"><strong>Plataforma:</strong> <xsl:value-of select="plataforma" /></div>
+                            <div class="description"><strong>Descripción:</strong> <xsl:value-of select="descripcion" /></div>
+                        </div>
+                    </xsl:for-each>
                 </div>
 
                 <!-- Pie de página -->
