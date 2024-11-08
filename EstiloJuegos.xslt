@@ -104,7 +104,7 @@
                  <!-- Banner -->
                 <div class="banner">
                     <!-- Cambia "banner.jpg" por la ruta de tu imagen de banner -->
-                    <img src="../IMAGENES/banner.avif" alt="Banner de juegos" />
+                    <img src="banner.avif" alt="Banner de juegos" />
                 </div>
 
 
