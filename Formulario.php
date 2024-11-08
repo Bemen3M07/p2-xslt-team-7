@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $descripcion = htmlspecialchars($_POST['descripcion']);
 
     // Cargar el archivo XML existente
-    $xmlFile = '../XML/Juegos.xml';
+    $xmlFile = 'Juegos.xml';
     if (file_exists($xmlFile)) {
         $xml = simplexml_load_file($xmlFile);
     } else {
