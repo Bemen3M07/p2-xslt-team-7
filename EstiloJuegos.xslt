@@ -13,6 +13,7 @@
                         color: #333;
                         margin: 0;
                         padding: 0;
+                        min-height: 100vh;
                         display: flex;
                         flex-direction: column;
                         align-items: center;
@@ -28,6 +29,7 @@
                         max-width: 1200px;
                         width: 100%;
                         padding: 0 20px;
+                        flex: 1;
                     }
                     h1 {
                         margin: 0;
