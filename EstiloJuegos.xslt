@@ -1,93 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Declaración XML: Indica el formato de documento XML y establece la codificación de caracteres en UTF-8. -->
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    <!-- Inicia la hoja de estilo XSLT. Usa la versión 1.0 de XSLT y define el espacio de nombres XSL. -->
 
     <xsl:output method="html" encoding="UTF-8" />
-    <!-- Define que el resultado será un documento HTML con codificación UTF-8. -->
 
     <xsl:template match="/">
-        <!-- Define una plantilla que se aplicará al nodo raíz del documento XML. Esta es la entrada principal para la transformación. -->
         
         <html>
             <head>
                 
-                <title>Lista de Juegos</title> <!-- Define el título de la página web resultante. -->
+                <title>Lista de Juegos</title> 
                 
                 <style>
                     
                     body {
-                        font-family: Arial, sans-serif;      /* Aplica la fuente Arial o sans-serif si Arial no está disponible */
-                        background: #f4f4f9;                 /* Fondo gris claro */
-                        margin: 0;                           /* Elimina el margen predeterminado alrededor de la página */
-                        padding: 0;                          /* Elimina el relleno predeterminado */
-                        display: flex;                       /* Flexbox habilitado */
-                        flex-direction: column;              /* Organiza los elementos en una columna */
-                        align-items: center;                 /* Centra horizontalmente los elementos */
-                        min-height: 100vh;                   /* Asegura que el body ocupe toda la altura del viewport */
-                        justify-content: space-between;      /* Distribuye los elementos de manera equitativa, dejando espacio entre ellos */
+                        font-family: Arial, sans-serif;
+                        background: #f4f4f9;
+                        margin: 0;
+                        padding: 0;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        min-height: 100vh;
+                        justify-content: space-between;
                     }
 
                     .main-content {
-                        flex-grow: 1;                        /* Permite que el contenido principal crezca para ocupar el espacio disponible */
-                        width: 100%;                         /* Asegura que el contenido principal ocupe todo el ancho disponible */
-                        padding: 20px;                       /* Agrega algo de espacio interno */
+                        flex-grow: 1;
+                        width: 100%;
+                        padding: 20px;
                     }
 
                     header {
-                        background-color: #333;    /* Fondo oscuro */
-                        color: #fff;               /* Texto blanco */
-                        width: 100%;               /* Ancho total */
-                        display: flex;             /* Flexbox para centrar el contenido */
-                        align-items: center;       /* Centrado vertical */
-                        justify-content: space-between;   /* Espacio entre el título y el enlace */
-                        padding: 20px;             /* Espacio alrededor del contenido */
-                        box-sizing: border-box;    /* Asegura que el relleno se incluya en el cálculo del ancho */
+                        background-color: #333;
+                        color: #fff;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 20px;
+                        box-sizing: border-box;
                     }
 
                     .titulo {
-                        text-align: center;        /* Centra el contenido dentro de .titulo */
+                        text-align: center;
                     }
 
                     header h1 {
-                        margin: 0;                 /* Elimina márgenes por defecto alrededor del h1 */
-                        font-size: 36px;           /* Tamaño de fuente más grande */
+                        margin: 0;
+                        font-size: 36px;
                     }
                     header .btn-anadir {
-                        color: #fff;               /* Color del texto */
-                        text-decoration: none;     /* Elimina el subrayado */
-                        padding: 8px 12px;         /* Relleno para darle apariencia de botón */
-                        background-color: #555;    /* Fondo del botón */
-                        border-radius: 4px;        /* Bordes redondeados */
+                        color: #fff;
+                        text-decoration: none;
+                        padding: 8px 12px;
+                        background-color: #555;
+                        border-radius: 4px;
                         transition: background-color 0.3s;
                     }
 
                     header .btn-anadir:hover {
-                        background-color: #777;    /* Color al pasar el ratón por encima */
+                        background-color: #777;
                     }
 
                     .banner {
-                        width: 100%;               /* El banner ocupa todo el ancho */
-                        margin: 0;                  /* Elimina margen */
-                        padding: 0;                 /* Elimina relleno */
+                        width: 100%;
+                        margin: 0;
+                        padding: 0;
                     }
 
                     .banner img {
-                        width: 100%;               /* La imagen del banner ocupa todo el ancho */
-                        height: 80%;               /* Ajusta la altura automáticamente */
-                        display: block;            /* Quita el espacio inferior de las imágenes */
+                        width: 100%;
+                        height: 80%;
+                        display: block;
                     }
                 
                     .content {
-                        max-width: 800px;   /* Define un ancho máximo de 800px para el contenido central */
-                        width: 100%;        /* Permite que el contenido ocupe todo el ancho disponible dentro del contenedor */
-                        padding: 20px;      /* Agrega un relleno de 20px alrededor del contenido */
+                        max-width: 800px;
+                        width: 100%;
+                        padding: 20px;
                     }
 
                     .Juego {
                         background: #333;
-                        Color: white;
+                        color: white;
                         border: 1px solid #ddd;
                         border-radius: 8px;
                         padding: 20px;
@@ -98,76 +94,63 @@
                         transition: transform 0.2s;
                     }
 
-                    /* Agregar efecto al pasar el mouse */
                     .Juego:hover {
-                        transform: scale(1.05); /* Efecto de agrandamiento */
+                        transform: scale(1.05);
                     }
 
                     .title {
-                        font-weight: bold;          /* Define el título en negrita */
-                        margin-bottom: 10px;        /* Espacio inferior de 10px para separar el título del contenido siguiente */
+                        font-weight: bold;
+                        margin-bottom: 10px;
                     }
                 
                     .genre, .platform, .description {
-                        margin: 5px 0;      /* Agrega 5px de espacio arriba y abajo para separar las líneas */
+                        margin: 5px 0;
                     }
                 
                     .description {
-                        color: grey;        /* Color gris medio para la descripción, diferenciándola visualmente del texto principal */
+                        color: grey;
                     }
 
                     footer {
-                        width: 100%;                         /* El footer ocupa todo el ancho */
-                        background: #333;                    /* Fondo oscuro */
-                        color: #fff;                         /* Texto blanco */
-                        text-align: center;                  /* Centra el texto */
-                        padding: 10px 0;                     /* Espacio de relleno en el footer */
+                        width: 100%;
+                        background: #333;
+                        color: #fff;
+                        text-align: center;
+                        padding: 10px 0;
                     }
                 </style>
                               
             </head>
 
             <body>
-                <!-- Contenido principal de la página web generado -->
 
-                <!-- Encabezado -->
                 <header>
                 </header>
 
-                 <!-- Banner -->
                 <div class="banner">
-                    <!-- Cambia "banner.jpg" por la ruta de tu imagen de banner -->
                     <img src="banner.avif" alt="Banner de juegos" />
                 </div>
 
-
-                <!-- Contenedor de tarjetas de juegos -->
                 <div class="content">
                     <xsl:for-each select="juegos/juego">
-                        <!-- Itera sobre cada elemento <juego> dentro del elemento <juegos> en el XML, generando una tarjeta para cada juego -->
                         
                         <div class="Juego">
-                            <!-- Tarjeta individual para cada juego -->
 
-                            <div class="title"><xsl:value-of select="titulo" /></div> <!-- Muestra el título del juego -->
-                            <div class="genre"><strong>Género:</strong> <xsl:value-of select="genero" /></div> <!-- Muestra el género del juego -->
-                            <div class="platform"><strong>Plataforma:</strong> <xsl:value-of select="plataforma" /></div> <!-- Muestra la plataforma -->
-                            <div class="description"><strong>Descripción:</strong> <xsl:value-of select="descripcion" /></div> <!-- Muestra la descripción -->
+                            <div class="title"><xsl:value-of select="titulo" /></div>
+                            <div class="genre"><strong>Género:</strong> <xsl:value-of select="genero" /></div>
+                            <div class="platform"><strong>Plataforma:</strong> <xsl:value-of select="plataforma" /></div>
+                            <div class="description"><strong>Descripción:</strong> <xsl:value-of select="descripcion" /></div>
                         </div>
                     </xsl:for-each>
                 </div>
 
-
-            <!-- Pie de página -->
                 <footer>
                     <div class="footer">
-                        <p>© 2024 Lista de Juegos. Todos los derechos reservados.</p> <!-- Texto del pie de página -->
+                        <p>© 2024 Lista de Juegos. Todos los derechos reservados.</p>
                     </div>
                 </footer>
             </body>
         </html>
-
-
 
     </xsl:template>
 </xsl:stylesheet>
