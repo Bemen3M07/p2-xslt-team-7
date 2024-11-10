@@ -41,7 +41,7 @@
                         width: 100%;               /* Ancho total */
                         display: flex;             /* Flexbox para centrar el contenido */
                         align-items: center;       /* Centrado vertical */
-                        justify-content: center;   /* Centrado horizontal */
+                        justify-content: space-between;   /* Espacio entre el título y el enlace */
                         padding: 20px;             /* Espacio alrededor del contenido */
                         box-sizing: border-box;    /* Asegura que el relleno se incluya en el cálculo del ancho */
                     }
@@ -54,6 +54,18 @@
                         margin: 0;                 /* Elimina márgenes por defecto alrededor del h1 */
                         font-size: 36px;           /* Tamaño de fuente más grande */
                     }
+                    header .btn-anadir {
+                        color: #fff;               /* Color del texto */
+                        text-decoration: none;     /* Elimina el subrayado */
+                        padding: 8px 12px;         /* Relleno para darle apariencia de botón */
+                        background-color: #555;    /* Fondo del botón */
+                        border-radius: 4px;        /* Bordes redondeados */
+                        transition: background-color 0.3s;
+                    }
+
+                    header .btn-anadir:hover {
+                        background-color: #777;    /* Color al pasar el ratón por encima */
+                    }
 
                     .banner {
                         width: 100%;               /* El banner ocupa todo el ancho */
@@ -63,7 +75,7 @@
 
                     .banner img {
                         width: 100%;               /* La imagen del banner ocupa todo el ancho */
-                        height: auto;              /* Ajusta la altura automáticamente */
+                        height: 80%;               /* Ajusta la altura automáticamente */
                         display: block;            /* Quita el espacio inferior de las imágenes */
                     }
                 
@@ -123,6 +135,7 @@
                     <div class="titulo">
                         <h1>Lista de Juegos</h1> <!-- Título principal de la página -->
                     </div>
+                    <a href="/Formulario.php" target="_blank" class="btn-anadir">Añadir Juego</a>
                 </header>
 
                  <!-- Banner -->
