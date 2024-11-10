@@ -134,6 +134,7 @@
                 <header>
                     <div class="titulo">
                         <h1>Lista de Juegos</h1> <!-- Título principal de la página -->
+                        <a href="/Formulario.php" target="_blank" class="btn-anadir">Añadir Juego</a>
                     </div>
                 </header>
 
