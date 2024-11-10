@@ -1,33 +1,33 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Obtener los datos del formulario
-    $titulo = htmlspecialchars($_POST['titulo']);
-    $genero = htmlspecialchars($_POST['genero']);
-    $plataforma = htmlspecialchars($_POST['plataforma']);
-    $descripcion = htmlspecialchars($_POST['descripcion']);
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Obtener los datos del formulario
+        $titulo = htmlspecialchars($_POST['titulo']);
+        $genero = htmlspecialchars($_POST['genero']);
+        $plataforma = htmlspecialchars($_POST['plataforma']);
+        $descripcion = htmlspecialchars($_POST['descripcion']);
 
-    // Cargar el archivo XML existente
-    $xmlFile = 'Juegos.xml';
-    if (file_exists($xmlFile)) {
-        $xml = simplexml_load_file($xmlFile);
-    } else {
-        echo "El archivo XML no existe.";
-        exit;
+        // Cargar el archivo XML existente
+        $xmlFile = 'Juegos.xml';
+        if (file_exists($xmlFile)) {
+            $xml = simplexml_load_file($xmlFile);
+        } else {
+            echo "El archivo XML no existe.";
+            exit;
+        }
+
+        // Crear un nuevo nodo <juego> y agregar los datos
+        $juego = $xml->addChild('juego');
+        $juego->addChild('titulo', $titulo);
+        $juego->addChild('genero', $genero);
+        $juego->addChild('plataforma', $plataforma);
+        $juego->addChild('descripcion', $descripcion);
+
+        // Guardar el archivo XML actualizado
+        $xml->asXML($xmlFile);
+
+        // Mostrar el mensaje de éxito sin redirigir
+        echo "<script>alert('Juego agregado correctamente.');</script>";
     }
-
-    // Crear un nuevo nodo <juego> y agregar los datos
-    $juego = $xml->addChild('juego');
-    $juego->addChild('titulo', $titulo);
-    $juego->addChild('genero', $genero);
-    $juego->addChild('plataforma', $plataforma);
-    $juego->addChild('descripcion', $descripcion);
-
-    // Guardar el archivo XML actualizado
-    $xml->asXML($xmlFile);
-
-    // Mostrar el mensaje de éxito sin redirigir
-    echo "<script>alert('Juego agregado correctamente.');</script>";
-}
 ?>
 
 <!DOCTYPE html>
