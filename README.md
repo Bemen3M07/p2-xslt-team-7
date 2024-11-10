@@ -21,4 +21,4 @@ El ejercicio 02 son simplemente comantarios a si que no hara falta explicacion
 
 Ejercicio 03
 
-para este ejercicio necesitaremos el xamp activado i los archivos en la carpate xampp/hdocs, con esto echo nos iremos al navegador i escribiremos localhost/Juegos.xml i ya estaria en funcionamiento, tendriamos arrriba a la derecha un boton para agregar juegos con un formulario
+para este ejercicio necesitaremos tener el xampp installado como activado el apache i MySql activado, los archivos en la carpate xampp/hdocs de la carpeta M07_UF1_P2_Carizo_Enrique_Ocaña_Cristian los archivos de la carpeta Exercici_03, con esto echo nos iremos al navegador i escribiremos localhost/Juegos.xml i ya estaria en funcionamiento, tendriamos arrriba a la derecha un boton para agregar juegos con un formulario
